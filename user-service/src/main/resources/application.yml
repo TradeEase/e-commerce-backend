@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: ${JDBC_DATABASE_URL:jdbc:mysql://localhost:3306/user-service?serverTimezone=UTC}
-    username: ${JDBC_DATABASE_USERNAME:root}
-    password: ${JDBC_DATABASE_PASSWORD:<<YOUR_PASSWORD>>}
+    url: ${JDBC_DATABASE_URL:jdbc:mysql://MYSQL1001.site4now.net:3306/db_aaede1_user}
+    username: ${JDBC_DATABASE_USERNAME:aaede1_user}
+    password: ${JDBC_DATABASE_PASSWORD:*gV3WS_kLEjVcxB}
     hikari:
       connection-timeout: 30000
       maximum-pool-size: 10
