@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping(value = "/api/reviews", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/product/reviews", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ReviewResource {
 
     private final ReviewService reviewService;
