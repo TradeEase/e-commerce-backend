@@ -26,3 +26,5 @@ error:
       5xx: ERROR
 springdoc:
   pathsToMatch: /, /api/**
+server:
+  port: 8082
