@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 public class OrderDTO {
 
-    private Integer order;
+    private Integer orderId;
     private Integer userId;
     private Integer totalAmount;
     private Boolean status;

@@ -32,9 +32,6 @@ public class OrderItem {
     private Integer orderItemId;
 
     @Column
-    private Integer orderId;
-
-    @Column
     private Integer productId;
 
     @Column

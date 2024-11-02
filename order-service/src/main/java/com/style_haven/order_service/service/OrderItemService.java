@@ -55,16 +55,14 @@ public class OrderItemService {
 
     private OrderItemDTO mapToDTO(final OrderItem orderItem, final OrderItemDTO orderItemDTO) {
         orderItemDTO.setOrderItemId(orderItem.getOrderItemId());
-        orderItemDTO.setOrderId(orderItem.getOrderId());
         orderItemDTO.setProductId(orderItem.getProductId());
         orderItemDTO.setQuantity(orderItem.getQuantity());
         orderItemDTO.setPrice(orderItem.getPrice());
-        orderItemDTO.setOrder(orderItem.getOrder() == null ? null : orderItem.getOrder().getOrder());
+        orderItemDTO.setOrder(orderItem.getOrder() == null ? null : orderItem.getOrder().getOrderId());
         return orderItemDTO;
     }
 
     private OrderItem mapToEntity(final OrderItemDTO orderItemDTO, final OrderItem orderItem) {
-        orderItem.setOrderId(orderItemDTO.getOrderId());
         orderItem.setProductId(orderItemDTO.getProductId());
         orderItem.setQuantity(orderItemDTO.getQuantity());
         orderItem.setPrice(orderItemDTO.getPrice());

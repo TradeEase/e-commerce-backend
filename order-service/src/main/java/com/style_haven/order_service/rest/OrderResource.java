@@ -35,33 +35,35 @@ public class OrderResource {
         return ResponseEntity.ok(orderService.findAll());
     }
 
-    @GetMapping("/{order}")
-    public ResponseEntity<OrderDTO> getOrder(@PathVariable(name = "order") final Integer order) {
-        return ResponseEntity.ok(orderService.get(order));
+    @GetMapping("/{orderId}")
+    public ResponseEntity<OrderDTO> getOrder(
+            @PathVariable(name = "orderId") final Integer orderId) {
+        return ResponseEntity.ok(orderService.get(orderId));
     }
 
     @PostMapping
     @ApiResponse(responseCode = "201")
     public ResponseEntity<Integer> createOrder(@RequestBody @Valid final OrderDTO orderDTO) {
-        final Integer createdOrder = orderService.create(orderDTO);
-        return new ResponseEntity<>(createdOrder, HttpStatus.CREATED);
+        final Integer createdOrderId = orderService.create(orderDTO);
+        return new ResponseEntity<>(createdOrderId, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{order}")
-    public ResponseEntity<Integer> updateOrder(@PathVariable(name = "order") final Integer order,
+    @PutMapping("/{orderId}")
+    public ResponseEntity<Integer> updateOrder(
+            @PathVariable(name = "orderId") final Integer orderId,
             @RequestBody @Valid final OrderDTO orderDTO) {
-        orderService.update(order, orderDTO);
-        return ResponseEntity.ok(order);
+        orderService.update(orderId, orderDTO);
+        return ResponseEntity.ok(orderId);
     }
 
-    @DeleteMapping("/{order}")
+    @DeleteMapping("/{orderId}")
     @ApiResponse(responseCode = "204")
-    public ResponseEntity<Void> deleteOrder(@PathVariable(name = "order") final Integer order) {
-        final ReferencedWarning referencedWarning = orderService.getReferencedWarning(order);
+    public ResponseEntity<Void> deleteOrder(@PathVariable(name = "orderId") final Integer orderId) {
+        final ReferencedWarning referencedWarning = orderService.getReferencedWarning(orderId);
         if (referencedWarning != null) {
             throw new ReferencedException(referencedWarning);
         }
-        orderService.delete(order);
+        orderService.delete(orderId);
         return ResponseEntity.noContent().build();
     }
 

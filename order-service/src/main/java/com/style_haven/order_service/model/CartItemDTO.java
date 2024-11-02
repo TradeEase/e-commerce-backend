@@ -9,7 +9,6 @@ import lombok.Setter;
 public class CartItemDTO {
 
     private Integer cartItemId;
-    private Integer cartId;
     private Integer productId;
     private Integer quantity;
     private Integer cart;

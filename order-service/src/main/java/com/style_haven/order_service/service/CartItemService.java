@@ -55,7 +55,6 @@ public class CartItemService {
 
     private CartItemDTO mapToDTO(final CartItem cartItem, final CartItemDTO cartItemDTO) {
         cartItemDTO.setCartItemId(cartItem.getCartItemId());
-        cartItemDTO.setCartId(cartItem.getCartId());
         cartItemDTO.setProductId(cartItem.getProductId());
         cartItemDTO.setQuantity(cartItem.getQuantity());
         cartItemDTO.setCart(cartItem.getCart() == null ? null : cartItem.getCart().getCartId());
@@ -63,7 +62,6 @@ public class CartItemService {
     }
 
     private CartItem mapToEntity(final CartItemDTO cartItemDTO, final CartItem cartItem) {
-        cartItem.setCartId(cartItemDTO.getCartId());
         cartItem.setProductId(cartItemDTO.getProductId());
         cartItem.setQuantity(cartItemDTO.getQuantity());
         final Cart cart = cartItemDTO.getCart() == null ? null : cartRepository.findById(cartItemDTO.getCart())
