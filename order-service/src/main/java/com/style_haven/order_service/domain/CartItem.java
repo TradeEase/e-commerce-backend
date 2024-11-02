@@ -31,9 +31,6 @@ public class CartItem {
     private Integer cartItemId;
 
     @Column
-    private Integer cartId;
-
-    @Column
     private Integer productId;
 
     @Column

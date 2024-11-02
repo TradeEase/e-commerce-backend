@@ -30,7 +30,7 @@ public class Order {
     @Id
     @Column(nullable = false, updatable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer order;
+    private Integer orderId;
 
     @Column
     private Integer userId;

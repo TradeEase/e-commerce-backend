@@ -29,37 +29,37 @@ public class OrderService {
     }
 
     public List<OrderDTO> findAll() {
-        final List<Order> orders = orderRepository.findAll(Sort.by("order"));
+        final List<Order> orders = orderRepository.findAll(Sort.by("orderId"));
         return orders.stream()
                 .map(order -> mapToDTO(order, new OrderDTO()))
                 .toList();
     }
 
-    public OrderDTO get(final Integer order) {
-        return orderRepository.findById(order)
-                .map(orderEntity -> mapToDTO(orderEntity, new OrderDTO()))
+    public OrderDTO get(final Integer orderId) {
+        return orderRepository.findById(orderId)
+                .map(order -> mapToDTO(order, new OrderDTO()))
                 .orElseThrow(NotFoundException::new);
     }
 
     public Integer create(final OrderDTO orderDTO) {
         final Order order = new Order();
         mapToEntity(orderDTO, order);
-        return orderRepository.save(order).getOrder();
+        return orderRepository.save(order).getOrderId();
     }
 
-    public void update(final Integer order, final OrderDTO orderDTO) {
-        final Order orderEntity = orderRepository.findById(order)
+    public void update(final Integer orderId, final OrderDTO orderDTO) {
+        final Order order = orderRepository.findById(orderId)
                 .orElseThrow(NotFoundException::new);
-        mapToEntity(orderDTO, orderEntity);
-        orderRepository.save(orderEntity);
+        mapToEntity(orderDTO, order);
+        orderRepository.save(order);
     }
 
-    public void delete(final Integer order) {
-        orderRepository.deleteById(order);
+    public void delete(final Integer orderId) {
+        orderRepository.deleteById(orderId);
     }
 
     private OrderDTO mapToDTO(final Order order, final OrderDTO orderDTO) {
-        orderDTO.setOrder(order.getOrder());
+        orderDTO.setOrderId(order.getOrderId());
         orderDTO.setUserId(order.getUserId());
         orderDTO.setTotalAmount(order.getTotalAmount());
         orderDTO.setStatus(order.getStatus());
@@ -77,9 +77,9 @@ public class OrderService {
         return order;
     }
 
-    public ReferencedWarning getReferencedWarning(final Integer order) {
+    public ReferencedWarning getReferencedWarning(final Integer orderId) {
         final ReferencedWarning referencedWarning = new ReferencedWarning();
-        final Order order = orderRepository.findById(order)
+        final Order order = orderRepository.findById(orderId)
                 .orElseThrow(NotFoundException::new);
         final OrderItem orderOrderItem = orderItemRepository.findFirstByOrder(order);
         if (orderOrderItem != null) {

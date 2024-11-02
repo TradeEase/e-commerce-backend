@@ -82,7 +82,7 @@ public class CartService {
         final Order cartOrder = orderRepository.findFirstByCart(cart);
         if (cartOrder != null) {
             referencedWarning.setKey("cart.order.cart.referenced");
-            referencedWarning.addParam(cartOrder.getOrder());
+            referencedWarning.addParam(cartOrder.getOrderId());
             return referencedWarning;
         }
         return null;
