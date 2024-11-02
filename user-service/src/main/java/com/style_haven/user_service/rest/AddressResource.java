@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping(value = "/api/addresses", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/user/addresses", produces = MediaType.APPLICATION_JSON_VALUE)
 public class AddressResource {
 
     private final AddressService addressService;
