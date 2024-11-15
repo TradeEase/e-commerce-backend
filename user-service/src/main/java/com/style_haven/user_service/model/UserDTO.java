@@ -2,10 +2,23 @@ package com.style_haven.user_service.model;
 
 import jakarta.validation.constraints.Size;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Document(collection = "user")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class UserDTO {
 
-    private Integer userid;
+    @Id
+    private String id;
 
     @Size(max = 255)
     private String fname;
@@ -28,15 +41,17 @@ public class UserDTO {
     @Size(max = 255)
     private String email;
 
-    @Size(max = 255)
-    private String username;
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private String password;
+    private String role = "ROLE_CUSTOMER";
+    private String mobile;
 
-    public Integer getUserid() {
-        return userid;
+    public String getId() {
+        return id;
     }
 
-    public void setUserid(final Integer userid) {
-        this.userid = userid;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFname() {
@@ -90,17 +105,25 @@ public class UserDTO {
     public String getEmail() {
         return email;
     }
-
-    public void setEmail(final String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
-
-    public String getUsername() {
-        return username;
+    public String getPassword() {
+        return password;
     }
-
-    public void setUsername(final String username) {
-        this.username = username;
+    public void setPassword(String password) {
+        this.password = password;
     }
-
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    public String getMobile() {
+        return mobile;
+    }
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
 }
