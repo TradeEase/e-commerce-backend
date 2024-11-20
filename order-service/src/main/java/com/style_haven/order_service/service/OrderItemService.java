@@ -24,7 +24,7 @@ public class OrderItemService {
     }
 
     public List<OrderItemDTO> findAll() {
-        final List<OrderItem> orderItems = orderItemRepository.findAll(Sort.by("orderItemId"));
+        final List<OrderItem> orderItems = orderItemRepository.findAll(Sort.by(Sort.Direction.ASC, "orderItemId"));
         return orderItems.stream()
                 .map(orderItem -> mapToDTO(orderItem, new OrderItemDTO()))
                 .toList();
@@ -33,7 +33,7 @@ public class OrderItemService {
     public OrderItemDTO get(final Integer orderItemId) {
         return orderItemRepository.findById(orderItemId)
                 .map(orderItem -> mapToDTO(orderItem, new OrderItemDTO()))
-                .orElseThrow(NotFoundException::new);
+                .orElseThrow(() -> new NotFoundException("Order item not found"));
     }
 
     public Integer create(final OrderItemDTO orderItemDTO) {
@@ -44,12 +44,15 @@ public class OrderItemService {
 
     public void update(final Integer orderItemId, final OrderItemDTO orderItemDTO) {
         final OrderItem orderItem = orderItemRepository.findById(orderItemId)
-                .orElseThrow(NotFoundException::new);
+                .orElseThrow(() -> new IllegalArgumentException("Order item not found"));
         mapToEntity(orderItemDTO, orderItem);
         orderItemRepository.save(orderItem);
     }
 
     public void delete(final Integer orderItemId) {
+        if (!orderItemRepository.existsById(orderItemId)) {
+            throw new IllegalArgumentException("Order item not found");
+        }
         orderItemRepository.deleteById(orderItemId);
     }
 
