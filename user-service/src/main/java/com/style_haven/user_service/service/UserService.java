@@ -1,9 +1,7 @@
 package com.style_haven.user_service.service;
 
-import com.style_haven.user_service.domain.Address;
 import com.style_haven.user_service.domain.User;
 import com.style_haven.user_service.model.UserDTO;
-import com.style_haven.user_service.repos.AddressRepository;
 import com.style_haven.user_service.repos.UserRepository;
 import com.style_haven.user_service.util.NotFoundException;
 import java.util.List;
@@ -15,64 +13,63 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository userRepository;
-    private final AddressRepository addressRepository;
 
-    public UserService(final UserRepository userRepository,
-            final AddressRepository addressRepository) {
+    public UserService(final UserRepository userRepository) {
         this.userRepository = userRepository;
-        this.addressRepository = addressRepository;
     }
 
     public List<UserDTO> findAll() {
-        final List<User> users = userRepository.findAll(Sort.by("userId"));
+        final List<User> users = userRepository.findAll(Sort.by("userid"));
         return users.stream()
                 .map(user -> mapToDTO(user, new UserDTO()))
                 .toList();
     }
 
-    public UserDTO get(final Long userId) {
-        return userRepository.findById(userId)
+    public UserDTO get(final Integer userid) {
+        return userRepository.findById(userid)
                 .map(user -> mapToDTO(user, new UserDTO()))
                 .orElseThrow(NotFoundException::new);
     }
 
-    public Long create(final UserDTO userDTO) {
+    public Integer create(final UserDTO userDTO) {
         final User user = new User();
         mapToEntity(userDTO, user);
-        return userRepository.save(user).getUserId();
+        return userRepository.save(user).getUserid();
     }
 
-    public void update(final Long userId, final UserDTO userDTO) {
-        final User user = userRepository.findById(userId)
+    public void update(final Integer userid, final UserDTO userDTO) {
+        final User user = userRepository.findById(userid)
                 .orElseThrow(NotFoundException::new);
         mapToEntity(userDTO, user);
         userRepository.save(user);
     }
 
-    public void delete(final Long userId) {
-        userRepository.deleteById(userId);
+    public void delete(final Integer userid) {
+        userRepository.deleteById(userid);
     }
 
     private UserDTO mapToDTO(final User user, final UserDTO userDTO) {
-        userDTO.setUserId(user.getUserId());
-        userDTO.setPassword(user.getPassword());
-        userDTO.setFirstName(user.getFirstName());
-        userDTO.setLastName(user.getLastName());
+        userDTO.setUserid(user.getUserid());
+        userDTO.setFname(user.getFname());
+        userDTO.setLname(user.getLname());
+        userDTO.setState(user.getState());
+        userDTO.setCity(user.getCity());
+        userDTO.setStreet(user.getStreet());
+        userDTO.setPostalCode(user.getPostalCode());
         userDTO.setEmail(user.getEmail());
-        userDTO.setUserName(user.getUserName());
-        userDTO.setAddress(user.getAddress() == null ? null : user.getAddress().getAddressId());
+        userDTO.setUsername(user.getUsername());
         return userDTO;
     }
 
     private User mapToEntity(final UserDTO userDTO, final User user) {
-        user.setPassword(userDTO.getPassword());
-        user.setFirstName(userDTO.getFirstName());
-        user.setLastName(userDTO.getLastName());
+        user.setFname(userDTO.getFname());
+        user.setLname(userDTO.getLname());
+        user.setState(userDTO.getState());
+        user.setCity(userDTO.getCity());
+        user.setStreet(userDTO.getStreet());
+        user.setPostalCode(userDTO.getPostalCode());
         user.setEmail(userDTO.getEmail());
-        user.setUserName(userDTO.getUserName());
-        final Address address = userDTO.getAddress() == null ? null : addressRepository.findById(userDTO.getAddress())
-                .orElseThrow(() -> new NotFoundException("address not found"));
-        user.setAddress(address);
+        user.setUsername(userDTO.getUsername());
         return user;
     }
 

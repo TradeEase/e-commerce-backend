@@ -33,29 +33,29 @@ public class UserResource {
         return ResponseEntity.ok(userService.findAll());
     }
 
-    @GetMapping("/{userId}")
-    public ResponseEntity<UserDTO> getUser(@PathVariable(name = "userId") final Long userId) {
-        return ResponseEntity.ok(userService.get(userId));
+    @GetMapping("/{userid}")
+    public ResponseEntity<UserDTO> getUser(@PathVariable(name = "userid") final Integer userid) {
+        return ResponseEntity.ok(userService.get(userid));
     }
 
     @PostMapping
     @ApiResponse(responseCode = "201")
-    public ResponseEntity<Long> createUser(@RequestBody @Valid final UserDTO userDTO) {
-        final Long createdUserId = userService.create(userDTO);
-        return new ResponseEntity<>(createdUserId, HttpStatus.CREATED);
+    public ResponseEntity<Integer> createUser(@RequestBody @Valid final UserDTO userDTO) {
+        final Integer createdUserid = userService.create(userDTO);
+        return new ResponseEntity<>(createdUserid, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{userId}")
-    public ResponseEntity<Long> updateUser(@PathVariable(name = "userId") final Long userId,
+    @PutMapping("/{userid}")
+    public ResponseEntity<Integer> updateUser(@PathVariable(name = "userid") final Integer userid,
             @RequestBody @Valid final UserDTO userDTO) {
-        userService.update(userId, userDTO);
-        return ResponseEntity.ok(userId);
+        userService.update(userid, userDTO);
+        return ResponseEntity.ok(userid);
     }
 
-    @DeleteMapping("/{userId}")
+    @DeleteMapping("/{userid}")
     @ApiResponse(responseCode = "204")
-    public ResponseEntity<Void> deleteUser(@PathVariable(name = "userId") final Long userId) {
-        userService.delete(userId);
+    public ResponseEntity<Void> deleteUser(@PathVariable(name = "userid") final Integer userid) {
+        userService.delete(userid);
         return ResponseEntity.noContent().build();
     }
 

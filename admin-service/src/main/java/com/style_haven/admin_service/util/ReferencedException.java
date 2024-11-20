@@ -1,4 +1,4 @@
-package com.style_haven.user_service.util;
+package com.style_haven.admin_service.util;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
