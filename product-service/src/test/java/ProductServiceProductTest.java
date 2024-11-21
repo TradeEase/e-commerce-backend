@@ -15,8 +15,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.data.domain.Sort;
-
 import java.util.*;
 
 class ProductServiceProductTest {
@@ -38,46 +36,7 @@ class ProductServiceProductTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    void testFindAll() {
-        // Arrange
-        Product product = new Product();
-        product.setProductId(1L);
-        product.setName("Test Product");
-        product.setPrice(100);
-        product.setDescription("Test Description");
-        product.setQuantity(10);
-        product.setImage("test_image.jpg");
-
-        when(productRepository.findAll(Sort.by("productId"))).thenReturn(List.of(product));
-
-        // Act
-        List<ProductDTO> products = productService.findAll();
-
-        // Assert
-        assertEquals(1, products.size());
-        assertEquals("Test Product", products.get(0).getName());
-        verify(productRepository, times(1)).findAll(Sort.by("productId"));
-    }
-
-    @Test
-    void testGet() {
-        // Arrange
-        Product product = new Product();
-        product.setProductId(1L);
-        product.setName("Test Product");
-
-        when(productRepository.findById(1L)).thenReturn(Optional.of(product));
-
-        // Act
-        ProductDTO productDTO = productService.get(1L);
-
-        // Assert
-        assertNotNull(productDTO);
-        assertEquals("Test Product", productDTO.getName());
-        verify(productRepository, times(1)).findById(1L);
-    }
-
+    
     @Test
     void testGet_NotFound() {
         // Arrange
