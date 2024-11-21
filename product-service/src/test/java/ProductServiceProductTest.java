@@ -19,7 +19,7 @@ import org.springframework.data.domain.Sort;
 
 import java.util.*;
 
-class producttest2 {
+class ProductServiceProductTest {
 
     @InjectMocks
     private ProductService productService;
