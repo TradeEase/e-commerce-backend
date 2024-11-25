@@ -1,4 +1,4 @@
-package com.style_haven.payment_gateway_service.rest;
+package com.style_haven.paymentservice.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

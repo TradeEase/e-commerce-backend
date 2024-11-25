@@ -1,14 +1,14 @@
-package com.style_haven.payment_gateway_service;
+package com.style_haven.paymentservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class PaymentGatewayServiceApplication {
+public class PaymentserviceApplication {
 
     public static void main(final String[] args) {
-        SpringApplication.run(PaymentGatewayServiceApplication.class, args);
+        SpringApplication.run(PaymentserviceApplication.class, args);
     }
 
 }

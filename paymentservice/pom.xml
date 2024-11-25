@@ -9,9 +9,9 @@
         <relativePath /><!-- lookup parent from repository -->
     </parent>
     <groupId>com.style-haven</groupId>
-    <artifactId>payment-gateway-service</artifactId>
+    <artifactId>paymentservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>payment-gateway-service</name>
+    <name>paymentservice</name>
 
     <properties>
         <java.version>21</java.version>
@@ -22,9 +22,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.stripe/stripe-java -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
+            <groupId>com.stripe</groupId>
+            <artifactId>stripe-java</artifactId>
+            <version>22.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.wimdeblauwe</groupId>
@@ -32,28 +34,15 @@
             <version>4.5.0</version>
         </dependency>
         <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.6.0</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.stripe</groupId>
-            <artifactId>stripe-java</artifactId>
-            <version>4.2.0</version>
         </dependency>
     </dependencies>
 
@@ -66,6 +55,12 @@
                     <profiles>
                         <profile>local</profile>
                     </profiles>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
