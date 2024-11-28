@@ -38,6 +38,7 @@ public class OrderResource {
     @GetMapping("/{orderId}")
     public ResponseEntity<OrderDTO> getOrder(
             @PathVariable(name = "orderId") final Integer orderId) {
+
         return ResponseEntity.ok(orderService.get(orderId));
     }
 
@@ -45,6 +46,7 @@ public class OrderResource {
     @ApiResponse(responseCode = "201")
     public ResponseEntity<Integer> createOrder(@RequestBody @Valid final OrderDTO orderDTO) {
         final Integer createdOrderId = orderService.create(orderDTO);
+        //orderService.fetchDataFromOtherService(String.valueOf(orderId));
         return new ResponseEntity<>(createdOrderId, HttpStatus.CREATED);
     }
 
@@ -66,5 +68,10 @@ public class OrderResource {
         orderService.delete(orderId);
         return ResponseEntity.noContent().build();
     }
+    @GetMapping("/fetch-data")
+    public String fetchDataFromOtherService() {
+        return orderService.fetchDataFromOtherService("1");
+    }
+
 
 }

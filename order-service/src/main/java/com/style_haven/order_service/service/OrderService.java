@@ -12,7 +12,7 @@ import com.style_haven.order_service.util.ReferencedWarning;
 import java.util.List;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-
+import org.springframework.web.reactive.function.client.WebClient;
 
 @Service
 public class OrderService {
@@ -20,12 +20,14 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final CartRepository cartRepository;
     private final OrderItemRepository orderItemRepository;
+    private final WebClient webClient;
 
     public OrderService(final OrderRepository orderRepository, final CartRepository cartRepository,
-            final OrderItemRepository orderItemRepository) {
+                        final OrderItemRepository orderItemRepository, final WebClient.Builder webClientBuilder) {
         this.orderRepository = orderRepository;
         this.cartRepository = cartRepository;
         this.orderItemRepository = orderItemRepository;
+        this.webClient = webClientBuilder.baseUrl("http://localhost:8083").build(); // Base URL for WebClient
     }
 
     public List<OrderDTO> findAll() {
@@ -72,7 +74,7 @@ public class OrderService {
         order.setTotalAmount(orderDTO.getTotalAmount());
         order.setStatus(orderDTO.getStatus());
         final Cart cart = orderDTO.getCart() == null ? null : cartRepository.findById(orderDTO.getCart())
-                .orElseThrow(() -> new NotFoundException("cart not found"));
+                .orElseThrow(() -> new NotFoundException("Cart not found"));
         order.setCart(cart);
         return order;
     }
@@ -90,4 +92,13 @@ public class OrderService {
         return null;
     }
 
+    public String fetchDataFromOtherService(String productId) {
+        String url = "/api/product/products/{productId}";
+
+        return webClient.get()
+                .uri(url)
+                .retrieve()
+                .bodyToMono(String.class) // Response type
+                .block(); // Blocking call (not recommended in reactive applications)
+    }
 }
