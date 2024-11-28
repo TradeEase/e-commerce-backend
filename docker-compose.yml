@@ -68,3 +68,5 @@ services:
       - "8086:8086"
     environment:
       - JAVA_OPTS=-Xmx256m
+
+  #those docker file has version issuers (change jdk 17 to 21)
