@@ -5,62 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1793f32-38e4-4c7f-86f9-4ed8b25bf690" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/e-commerce-backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/payment-gateway-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/java/com/style_haven/payment_gateway_service/ChargeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/java/com/style_haven/payment_gateway_service/ChargeRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/java/com/style_haven/payment_gateway_service/CheckoutController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/java/com/style_haven/payment_gateway_service/PaymentGatewayServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/java/com/style_haven/payment_gateway_service/StripeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/java/com/style_haven/payment_gateway_service/config/JacksonConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/java/com/style_haven/payment_gateway_service/rest/HomeResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/resources/templates/checkout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-gateway-service/payment-gateway-service/src/main/resources/templates/result.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/TaskUserService/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paymentservice/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="PaymentGateWayAdded" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "herathua"
+  }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/TradeEase/e-commerce-backend.git",
+    "accountId": "04861902-9d44-47aa-b2ef-883421e4e146"
+  }
 }]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2pK1H4Fz7UTF1cUCpU5PDKbfEbY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -68,14 +63,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Maven.e-commerce-backend [install].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "Spring Boot.AdminServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
     "Spring Boot.PaymentserviceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
     "Spring Boot.SpringCloudServiceApplication.executor": "Run",
-    "Spring Boot.TaskUserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "PaymentGateWayAdded",
+    "Spring Boot.TaskUserServiceApplication.executor": "Debug",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "Docker",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "F:/Acedemic/L3S1/EAD/project/MainBE/pom.xml",
@@ -89,6 +91,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -99,7 +106,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.TaskUserServiceApplication">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="spring-cloud-service" />
       <method v="2">
@@ -169,6 +176,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -187,6 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732499861417</updated>
       <workItem from="1732499862420" duration="3811000" />
+      <workItem from="1732767657220" duration="5060000" />
     </task>
     <servers />
   </component>

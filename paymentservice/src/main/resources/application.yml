@@ -1,3 +1,5 @@
 stripe:
   api:
     secret-key: "sk_test_51QLGZSCalQQ0YPlOQgqnJ9y2RB4lljRBY2knI1nRZk8lXfIMkepS0KRSb3PBDDoQiHQJ0TDL4aDjQM8QXl1kTD2R00dFHXSDvf"
+server:
+  port: 8086
