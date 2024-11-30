@@ -2,6 +2,9 @@ package com.example.TaskUserService.controller;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +26,9 @@ import com.example.TaskUserService.response.AuthResponse;
 import com.example.TaskUserService.service.UserService;
 import com.example.TaskUserService.service.UserServiceImplementation;
 import com.example.TaskUserService.usermodel.User;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/auth")
@@ -128,6 +134,76 @@ public class UserController {
 
     }
 
+    
+    // Get all users and customers
+    @GetMapping("/getAll")
+    public ResponseEntity<List<User>> getAll() {
+        try{
+            List<User> UserList = new ArrayList<>();
+            userRepository.findAll().forEach(UserList::add);
+            if(UserList.isEmpty()) {
+                return new ResponseEntity<>(UserList, HttpStatus.NO_CONTENT);
+            }
 
+            return new ResponseEntity<>(UserList, HttpStatus.OK);
+        }
+        catch(Exception ex) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    // Get all customers only
+    @GetMapping("/getAllcustomersonly")
+    public ResponseEntity<List<User>> getAllcustomersonly() {
+        try{
+            List<User> customersonlyList = new ArrayList<>();
+            userRepository.findAll().forEach(user -> {
+                if ("ROLE_CUSTOMER".equals(user.getRole())) {
+                    customersonlyList.add(user);
+                }
+            });
+            if(customersonlyList.isEmpty()) {
+                return new ResponseEntity<>(customersonlyList, HttpStatus.NO_CONTENT);
+            }
+
+            return new ResponseEntity<>(customersonlyList, HttpStatus.OK);
+        }
+        catch(Exception ex) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    // Get all users only
+    @GetMapping("/getAllusersonly")
+    public ResponseEntity<List<User>> getAllusersonly() {
+        try{
+            List<User> usersonlyList = new ArrayList<>();
+            userRepository.findAll().forEach(user -> {
+                if ("USER".equals(user.getRole())) {
+                    usersonlyList.add(user);
+                }
+            });
+            if(usersonlyList.isEmpty()) {
+                return new ResponseEntity<>(usersonlyList, HttpStatus.NO_CONTENT);
+            }
+
+            return new ResponseEntity<>(usersonlyList, HttpStatus.OK);
+        }
+        catch(Exception ex) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    //Update user details
+    @PostMapping("/update")
+    public ResponseEntity<User> updateUser(@RequestBody User user) {
+        try {
+            User _user = userRepository.save(new User(user.getId(), user.getFullName(), user.getEmail(), user.getPassword(), user.getRole(), user.getMobile()));
+            return new ResponseEntity<>(_user, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
 }
+
