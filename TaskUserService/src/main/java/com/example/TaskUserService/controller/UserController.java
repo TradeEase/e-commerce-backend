@@ -26,7 +26,10 @@ import com.example.TaskUserService.response.AuthResponse;
 import com.example.TaskUserService.service.UserService;
 import com.example.TaskUserService.service.UserServiceImplementation;
 import com.example.TaskUserService.usermodel.User;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -54,6 +57,7 @@ public class UserController {
         String email = user.getEmail();
         String password = user.getPassword();
         String fullName = user.getFullName();
+        String address = user.getAddress();
         String mobile = user.getMobile();
         String role = user.getRole();
 
@@ -65,6 +69,7 @@ public class UserController {
         User createdUser = new User();
         createdUser.setEmail(email);
         createdUser.setFullName(fullName);
+        createdUser.setAddress(address);
         createdUser.setMobile(mobile);
         createdUser.setRole(role);
         createdUser.setPassword(passwordEncoder.encode(password));
@@ -198,12 +203,30 @@ public class UserController {
     @PostMapping("/update")
     public ResponseEntity<User> updateUser(@RequestBody User user) {
         try {
-            User _user = userRepository.save(new User(user.getId(), user.getFullName(), user.getEmail(), user.getPassword(), user.getRole(), user.getMobile()));
+            User _user = userRepository.save(new User(user.getId(), user.getFullName(), user.getEmail(), user.getPassword(), user.getRole(),user.getAddress(), user.getMobile()));
             return new ResponseEntity<>(_user, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    //Get user by id
+    @GetMapping("/get/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable String id) {
+        User user = userRepository.findById(id).get();
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<HttpStatus> deleteUser(@PathVariable String id) {
+    try {
+        userRepository.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    } catch (Exception e) {
+        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    }
+
 
 }
 
