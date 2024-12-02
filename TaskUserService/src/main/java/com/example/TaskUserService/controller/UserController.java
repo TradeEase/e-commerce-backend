@@ -110,6 +110,9 @@ public class UserController {
         authResponse.setJwt(token);
         authResponse.setStatus(true);
 
+        System.out.println("Message(\"" + authResponse.getMessage() + "\");");
+        System.out.println("Jwt(\"" + authResponse.getJwt() + "\");");
+
         return new ResponseEntity<>(authResponse,HttpStatus.OK);
     }
 
