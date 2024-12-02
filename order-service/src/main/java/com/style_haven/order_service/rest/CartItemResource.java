@@ -33,6 +33,11 @@ public class CartItemResource {
         return ResponseEntity.ok(cartItemService.findAll());
     }
 
+    @GetMapping("/cart/{cartId}")
+    public ResponseEntity<List<CartItemDTO>> getCartItemsByCartId(@PathVariable(name = "cartId") final Integer cartId) {
+        return ResponseEntity.ok(cartItemService.getCartItemsByCartId(cartId));
+    }
+
     @GetMapping("/{cartItemId}")
     public ResponseEntity<CartItemDTO> getCartItem(
             @PathVariable(name = "cartItemId") final Integer cartItemId) {

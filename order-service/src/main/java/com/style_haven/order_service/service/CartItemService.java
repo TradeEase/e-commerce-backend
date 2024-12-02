@@ -17,6 +17,16 @@ public class CartItemService {
     private final CartItemRepository cartItemRepository;
     private final CartRepository cartRepository;
 
+    public List<CartItemDTO> getCartItemsByCartId(final Integer cartId) {
+        List<CartItem> cartItems = cartItemRepository.findByCart_CartId(cartId);
+        if (cartItems.isEmpty()) {
+            throw new NotFoundException("No cart items found for cart ID: " + cartId);
+        }
+        return cartItems.stream()
+                .map(cartItem -> mapToDTO(cartItem, new CartItemDTO()))
+                .toList();
+    }
+
     public CartItemService(final CartItemRepository cartItemRepository,
             final CartRepository cartRepository) {
         this.cartItemRepository = cartItemRepository;
