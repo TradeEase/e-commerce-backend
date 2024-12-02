@@ -4,6 +4,7 @@ package com.example.TaskUserService.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -229,6 +230,35 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
     }
+
+    // Update password by email
+    @PostMapping("/updatePasswordByEmail/{email}")
+    public ResponseEntity<String> updatePasswordByEmail(
+        @PathVariable String email,
+        @RequestBody Map<String, String> request) {
+    
+    // Extract password from request
+    String newPassword = request.get("password");
+    
+    // Validate input
+    if (newPassword == null || newPassword.isEmpty()) {
+        return new ResponseEntity<>("Password cannot be empty", HttpStatus.BAD_REQUEST);
+    }
+    
+    // Find user by email
+    User existingUser = userRepository.findByEmail(email);
+    if (existingUser != null) {
+        // Update and encode the new password
+        existingUser.setPassword(passwordEncoder.encode(newPassword));
+        
+        // Save the updated user
+        userRepository.save(existingUser);
+        return new ResponseEntity<>("Password updated successfully", HttpStatus.OK);
+    } else {
+        // Return error if user not found
+        return new ResponseEntity<>("User not found", HttpStatus.NOT_FOUND);
+    }
+}
 
 
 }
