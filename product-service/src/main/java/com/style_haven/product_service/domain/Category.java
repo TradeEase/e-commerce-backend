@@ -33,7 +33,7 @@ public class Category {
     private String name;
 
     @Column(name = "\"description\"")
-    private Integer description;
+    private String description;
 
     @ManyToMany(mappedBy = "categories")
     private Set<Product> products;

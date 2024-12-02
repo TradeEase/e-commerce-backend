@@ -16,6 +16,6 @@ public class CategoryDTO {
     @Size(max = 255)
     private String name;
 
-    private Integer description;
+    private String description;
 
 }
