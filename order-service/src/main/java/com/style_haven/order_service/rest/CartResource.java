@@ -1,5 +1,6 @@
 package com.style_haven.order_service.rest;
 
+import com.style_haven.order_service.domain.Cart;
 import com.style_haven.order_service.model.CartDTO;
 import com.style_haven.order_service.service.CartService;
 import com.style_haven.order_service.util.ReferencedException;
@@ -28,6 +29,11 @@ public class CartResource {
 
     public CartResource(final CartService cartService) {
         this.cartService = cartService;
+    }
+
+    @GetMapping("/{userId}/cart")
+    public ResponseEntity<CartDTO> getCartByUserID(@PathVariable(name = "userId") final Integer userId) {
+        return ResponseEntity.ok(cartService.getCartByUserId(userId));
     }
 
     @GetMapping

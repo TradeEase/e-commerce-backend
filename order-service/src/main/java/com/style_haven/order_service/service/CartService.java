@@ -27,6 +27,12 @@ public class CartService {
         this.cartItemRepository = cartItemRepository;
         this.orderRepository = orderRepository;
     }
+    public CartDTO getCartByUserId(final Integer userId) {
+        return cartRepository.findByUserId(userId).stream()
+                .findFirst() // Assuming one cart per user, otherwise handle list
+                .map(cart -> mapToDTO(cart, new CartDTO()))
+                .orElseThrow(NotFoundException::new);
+    }
 
     public List<CartDTO> findAll() {
         final List<Cart> carts = cartRepository.findAll(Sort.by("cartId"));

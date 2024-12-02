@@ -69,7 +69,7 @@ public class ProductService {
         productDTO.setQuantity(product.getQuantity());
         productDTO.setImage(product.getImage());
         productDTO.setCategories(product.getCategories().stream()
-                .map(category -> category.getCategoryId())
+                .map(Category::getCategoryId)
                 .toList());
         productDTO.setReview(product.getReview() == null ? null : product.getReview().getReviewId());
         return productDTO;
