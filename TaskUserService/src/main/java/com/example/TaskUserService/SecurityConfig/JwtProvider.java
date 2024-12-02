@@ -75,5 +75,13 @@ public class JwtProvider {
             return null;
         }
     }
+    // Parse JWT token and extract claims
+    public static Claims getClaims(String jwt) {
+        return Jwts.parserBuilder()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(jwt)
+                .getBody();
+    }
     
 }
