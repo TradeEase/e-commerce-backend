@@ -30,15 +30,21 @@ public class JwtTokenValidator extends OncePerRequestFilter {
             try {
                 Claims claims = JwtProvider.getClaims(jwt);
                 String email = claims.get("email", String.class);
+                String userId = claims.get("userId", String.class); // Extract userId from claims
                 String authorities = claims.get("authorities", String.class);
                 List<GrantedAuthority> auth = AuthorityUtils.commaSeparatedStringToAuthorityList(authorities);
 
+                // Log extracted details for debugging
+                System.out.println("Extracted email: " + email);
+                System.out.println("Extracted userId: " + userId);
+                System.out.println("Extracted authorities: " + authorities);
+
                 // Set authentication context
-                Authentication authentication = new UsernamePasswordAuthenticationToken(email, null, auth);
+                Authentication authentication = new UsernamePasswordAuthenticationToken(email, userId, auth);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             } catch (Exception e) {
                 response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                response.getWriter().write("Invalid JWT Token");
+                response.getWriter().write("Invalid JWT Token: " + e.getMessage());
                 return;
             }
         }
