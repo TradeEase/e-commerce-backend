@@ -97,22 +97,44 @@ public class UserController {
         String username = loginRequest.getEmail();
         String password = loginRequest.getPassword();
     
+        // Authenticate user credentials
         Authentication authentication = authenticate(username, password);
         SecurityContextHolder.getContext().setAuthentication(authentication);
     
+        // Find user by email
         User user = userRepository.findByEmail(username);
+        if (user == null) {
+            AuthResponse authResponse = new AuthResponse();
+            authResponse.setMessage("User not found");
+            authResponse.setStatus(false);
+            authResponse.setJwt("");
+            return new ResponseEntity<>(authResponse, HttpStatus.NOT_FOUND);
+        }
+    
+        // Generate JWT token
         String token = JwtProvider.generateToken(authentication, user.getId());
+    
+        // Extract and print all claims from the token
         Claims claims = JwtProvider.getClaims(token);
-        String extractedUserId = claims.get("userId", String.class);
-        System.out.println("User ID extracted from JWT: " + extractedUserId);
+        System.out.println("JWT Token Details:");
+        System.out.println("User ID: " + claims.get("userId", String.class));
+        System.out.println("Email: " + claims.get("email", String.class));
+        System.out.println("Authorities: " + claims.get("authorities", String.class));
+        System.out.println("Issued At: " + claims.getIssuedAt());
+        System.out.println("Expiration: " + claims.getExpiration());
+    
+        // Optional: Print the entire claims map for detailed debugging
+        System.out.println("Full Claims: " + claims);
+    
+        // Build and return the AuthResponse
         AuthResponse authResponse = new AuthResponse();
         authResponse.setMessage("Login success");
         authResponse.setJwt(token);
         authResponse.setStatus(true);
-        
-        
+    
         return new ResponseEntity<>(authResponse, HttpStatus.OK);
     }
+    
     
     
 
