@@ -32,6 +32,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 
 
 @RestController
@@ -52,21 +54,19 @@ public class UserController {
 
 
 
-
     @PostMapping("/signup")
-    public ResponseEntity<AuthResponse> createUserHandler(@RequestBody User user)  {
+    public ResponseEntity<AuthResponse> createUserHandler(@RequestBody User user) {
         String email = user.getEmail();
         String password = user.getPassword();
         String fullName = user.getFullName();
         String address = user.getAddress();
         String mobile = user.getMobile();
         String role = user.getRole();
-
-        User isEmailExist = userRepository.findByEmail(email);
-        if (isEmailExist != null) {
-            //throw new Exception("Email Is Already Used With Another Account");
-
+    
+        if (userRepository.findByEmail(email) != null) {
+            return new ResponseEntity<>(HttpStatus.CONFLICT); // Email already exists
         }
+    
         User createdUser = new User();
         createdUser.setEmail(email);
         createdUser.setFullName(fullName);
@@ -74,22 +74,20 @@ public class UserController {
         createdUser.setMobile(mobile);
         createdUser.setRole(role);
         createdUser.setPassword(passwordEncoder.encode(password));
-        
+    
         User savedUser = userRepository.save(createdUser);
-          userRepository.save(savedUser);
-        Authentication authentication = new UsernamePasswordAuthenticationToken(email,password);
+        Authentication authentication = new UsernamePasswordAuthenticationToken(email, password);
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        String token = JwtProvider.generateToken(authentication);
-
-
+    
+        String token = JwtProvider.generateToken(authentication, savedUser.getId());
         AuthResponse authResponse = new AuthResponse();
         authResponse.setJwt(token);
         authResponse.setMessage("Register Success");
         authResponse.setStatus(true);
-        return new ResponseEntity<AuthResponse>(authResponse, HttpStatus.OK);
-
+    
+        return new ResponseEntity<>(authResponse, HttpStatus.OK);
     }
-
+    
 
 
 
@@ -98,25 +96,25 @@ public class UserController {
     public ResponseEntity<AuthResponse> signin(@RequestBody User loginRequest) {
         String username = loginRequest.getEmail();
         String password = loginRequest.getPassword();
-
-        System.out.println(username+"-------"+password);
-
-        Authentication authentication = authenticate(username,password);
+    
+        Authentication authentication = authenticate(username, password);
         SecurityContextHolder.getContext().setAuthentication(authentication);
-
-        String token = JwtProvider.generateToken(authentication);
+    
+        User user = userRepository.findByEmail(username);
+        String token = JwtProvider.generateToken(authentication, user.getId());
+        Claims claims = JwtProvider.getClaims(token);
+        String extractedUserId = claims.get("userId", String.class);
+        System.out.println("User ID extracted from JWT: " + extractedUserId);
         AuthResponse authResponse = new AuthResponse();
-
         authResponse.setMessage("Login success");
         authResponse.setJwt(token);
         authResponse.setStatus(true);
-
-        System.out.println("Message(\"" + authResponse.getMessage() + "\");");
-        System.out.println("Jwt(\"" + authResponse.getJwt() + "\");");
-
-        return new ResponseEntity<>(authResponse,HttpStatus.OK);
+        
+        
+        return new ResponseEntity<>(authResponse, HttpStatus.OK);
     }
-
+    
+    
 
 
     
