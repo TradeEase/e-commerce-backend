@@ -1,7 +1,7 @@
-import com.style_haven.order_service.domain.OrderItem;
-import com.style_haven.order_service.model.OrderItemDTO;
-import com.style_haven.order_service.repos.OrderItemRepository;
-import com.style_haven.order_service.service.OrderItemService;
+import com.style_haven.orderservice.domain.OrderItem;
+import com.style_haven.orderservice.model.OrderItemDTO;
+import com.style_haven.orderservice.repos.OrderItemRepository;
+import com.style_haven.orderservice.service.OrderItemService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
