@@ -29,6 +29,10 @@ public class CartResource {
     public CartResource(final CartService cartService) {
         this.cartService = cartService;
     }
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<CartDTO> getCartByUserId(@PathVariable(name = "userId") final String userId) {
+        return ResponseEntity.ok(cartService.getByUserId(userId));
+    }
 
     @GetMapping
     public ResponseEntity<List<CartDTO>> getAllCarts() {

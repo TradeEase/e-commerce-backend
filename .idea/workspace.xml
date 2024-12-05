@@ -5,41 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1793f32-38e4-4c7f-86f9-4ed8b25bf690" name="Changes" comment="add find by cart item by cart id">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/OrderserviceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/OrderServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/config/DomainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/config/DomainConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/config/JacksonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/config/JacksonConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/config/WebClientConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/domain/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/domain/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/domain/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/model/CartDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/CartDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/model/CartItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/CartItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/model/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/model/OrderItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/OrderItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/repos/CartItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/CartItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/repos/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/repos/OrderItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/repos/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/rest/CartItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartItemResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/rest/CartResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/rest/HomeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/HomeResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/rest/OrderItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderItemResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/rest/OrderResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/service/CartItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/CartItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/service/OrderItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/util/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/util/NotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/util/ReferencedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/util/ReferencedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/order_service/util/ReferencedWarning.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/util/ReferencedWarning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/OrderItemServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/OrderItemServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/CartService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,39 +53,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.docker-compose.yml.paymentservice: Compose Deployment.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Docker.user-service/Dockerfile.executor": "Run",
-    "Maven.e-commerce-backend [install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.AdminServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.OrderserviceApplication.executor": "Run",
-    "Spring Boot.PaymentserviceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "Spring Boot.SpringCloudServiceApplication.executor": "Run",
-    "Spring Boot.TaskUserServiceApplication.executor": "Debug",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "CrosAdded-v2",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/Acedemic/L3S1/EAD/project/MainBE/pom.xml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml.paymentservice: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.user-service/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.e-commerce-backend [install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AdminServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SpringCloudServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TaskUserServiceApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CrosAdded-v2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Acedemic/L3S1/EAD/project/MainBE/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn install" />
@@ -291,7 +259,8 @@
       <workItem from="1733146761479" duration="6367000" />
       <workItem from="1733315093835" duration="184000" />
       <workItem from="1733330721935" duration="832000" />
-      <workItem from="1733331731857" duration="3034000" />
+      <workItem from="1733331731857" duration="3424000" />
+      <workItem from="1733371272320" duration="649000" />
     </task>
     <task id="LOCAL-00001" summary="add docker and docker compose files">
       <option name="closed" value="true" />
@@ -325,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733153381410</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add find by cart item by cart id">
+      <option name="closed" value="true" />
+      <created>1733334947651</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733334947651</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

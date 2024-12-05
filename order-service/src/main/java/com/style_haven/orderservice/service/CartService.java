@@ -28,6 +28,12 @@ public class CartService {
         this.cartItemRepository = cartItemRepository;
     }
 
+    public CartDTO getByUserId(final String userId) {
+        return cartRepository.findByUserId(userId)
+                .map(cart -> mapToDTO(cart, new CartDTO()))
+                .orElseThrow(NotFoundException::new);
+    }
+
     public List<CartDTO> findAll() {
         final List<Cart> carts = cartRepository.findAll(Sort.by("cartId"));
         return carts.stream()
