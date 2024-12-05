@@ -39,6 +39,13 @@ public class CartItemResource {
         return ResponseEntity.ok(cartItemService.get(cartItemId));
     }
 
+    @GetMapping("/cart/{cartId}")
+    public ResponseEntity<List<CartItemDTO>> getCartItemsByCart(
+            @PathVariable(name = "cartId") final Integer cartId) {
+        return ResponseEntity.ok(cartItemService.findByCart(cartId));
+    }
+
+
     @PostMapping
     @ApiResponse(responseCode = "201")
     public ResponseEntity<Integer> createCartItem(

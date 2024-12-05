@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1793f32-38e4-4c7f-86f9-4ed8b25bf690" name="Changes" comment="add find by cart item by cart id">
-      <change afterPath="$PROJECT_DIR$/paymentservice/src/main/java/com/style_haven/paymentservice/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paymentservice/src/main/java/com/style_haven/paymentservice/repository/PaymentRepository.java" afterDir="false" />
+    <list default="true" id="c1793f32-38e4-4c7f-86f9-4ed8b25bf690" name="Changes" comment="add db to payment gateway">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paymentservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paymentservice/src/main/java/com/style_haven/paymentservice/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/src/main/java/com/style_haven/paymentservice/service/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/CartItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/CartItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartItemResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/CartItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/CartItemService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +263,7 @@
       <workItem from="1733330721935" duration="832000" />
       <workItem from="1733331731857" duration="3424000" />
       <workItem from="1733371272320" duration="955000" />
-      <workItem from="1733381402223" duration="2191000" />
+      <workItem from="1733381402223" duration="2818000" />
     </task>
     <task id="LOCAL-00001" summary="add docker and docker compose files">
       <option name="closed" value="true" />
@@ -315,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733372022886</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add db to payment gateway">
+      <option name="closed" value="true" />
+      <created>1733384025230</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733384025231</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +332,7 @@
     <MESSAGE value="add comment" />
     <MESSAGE value="add find by user id in cart" />
     <MESSAGE value="add find by cart item by cart id" />
-    <option name="LAST_COMMIT_MESSAGE" value="add find by cart item by cart id" />
+    <MESSAGE value="add db to payment gateway" />
+    <option name="LAST_COMMIT_MESSAGE" value="add db to payment gateway" />
   </component>
 </project>
