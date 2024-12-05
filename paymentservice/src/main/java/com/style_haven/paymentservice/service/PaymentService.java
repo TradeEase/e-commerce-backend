@@ -1,13 +1,16 @@
 package com.style_haven.paymentservice.service;
 
+import com.style_haven.paymentservice.entity.Payment;
+import com.style_haven.paymentservice.model.PaymentRequest;
+import com.style_haven.paymentservice.model.PaymentResponse;
+import com.style_haven.paymentservice.repository.PaymentRepository;
 import com.stripe.Stripe;
 import com.stripe.exception.StripeException;
 import com.stripe.model.PaymentIntent;
-import com.style_haven.paymentservice.model.PaymentRequest;
-import com.style_haven.paymentservice.model.PaymentResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,8 +19,14 @@ public class PaymentService {
 
     @Value("${stripe.api.secret-key}")
     private String stripeApiKey;
-//example.payment.dto.PaymentResponse createPayment
-    public com.style_haven.paymentservice.model.PaymentResponse createPayment(PaymentRequest paymentRequest) {
+
+    private final PaymentRepository paymentRepository;
+
+    public PaymentService(PaymentRepository paymentRepository) {
+        this.paymentRepository = paymentRepository;
+    }
+
+    public PaymentResponse createPayment(PaymentRequest paymentRequest) {
         try {
             Stripe.apiKey = stripeApiKey;
 
@@ -28,6 +37,18 @@ public class PaymentService {
             params.put("description", paymentRequest.getDescription());
 
             PaymentIntent paymentIntent = PaymentIntent.create(params);
+
+            Payment payment = new Payment();
+            payment.setPaymentIntentId(paymentIntent.getId());
+            payment.setAmount(paymentRequest.getAmount());
+            payment.setCurrency(paymentRequest.getCurrency());
+            payment.setDescription(paymentRequest.getDescription());
+            payment.setStatus("created");
+            payment.setClientSecret(paymentIntent.getClientSecret());
+            payment.setCreatedAt(LocalDateTime.now());
+            payment.setUpdatedAt(LocalDateTime.now());
+
+            paymentRepository.save(payment);
 
             return new PaymentResponse(
                     paymentIntent.getId(),
@@ -45,6 +66,11 @@ public class PaymentService {
 
             PaymentIntent paymentIntent = PaymentIntent.retrieve(paymentIntentId);
             PaymentIntent confirmedPayment = paymentIntent.confirm();
+
+            Payment payment = paymentRepository.findByPaymentIntentId(paymentIntentId);
+            payment.setStatus("confirmed");
+            payment.setUpdatedAt(LocalDateTime.now());
+            paymentRepository.save(payment);
 
             return new PaymentResponse(
                     confirmedPayment.getId(),
