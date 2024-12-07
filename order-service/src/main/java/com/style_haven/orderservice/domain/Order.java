@@ -8,8 +8,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.time.OffsetDateTime;
 import java.util.Set;
@@ -35,13 +35,16 @@ public class Order {
     @Column
     private String userId;
 
-    @Column
-    private Integer totalAmount;
-
     @Column(columnDefinition = "tinyint", length = 1)
     private Boolean status;
 
-    @OneToMany(mappedBy = "order")
+    @Column
+    private Integer productId;
+
+    @Column
+    private Integer quantity;
+
+    @ManyToMany(mappedBy = "order")
     private Set<OrderItem> orderItems;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -33,7 +33,7 @@ public class Review {
     private Integer productId;
 
     @Column
-    private Integer userId;
+    private String userId;
 
     @Column
     private Integer rating;

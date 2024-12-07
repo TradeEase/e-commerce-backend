@@ -18,7 +18,7 @@ public class OrderItemService {
     private final OrderRepository orderRepository;
 
     public OrderItemService(final OrderItemRepository orderItemRepository,
-            final OrderRepository orderRepository) {
+                            final OrderRepository orderRepository) {
         this.orderItemRepository = orderItemRepository;
         this.orderRepository = orderRepository;
     }
@@ -29,7 +29,14 @@ public class OrderItemService {
                 .map(orderItem -> mapToDTO(orderItem, new OrderItemDTO()))
                 .toList();
     }
-
+    public List<OrderItemDTO> findByOrder(final Integer orderId) {
+        final Order order = orderRepository.findById(orderId)
+                .orElseThrow(() -> new NotFoundException("Order not found"));
+        final List<OrderItem> orderItems = orderItemRepository.findByOrder(order);
+        return orderItems.stream()
+                .map(orderItem -> mapToDTO(orderItem, new OrderItemDTO()))
+                .toList();
+    }
     public OrderItemDTO get(final Integer orderItemId) {
         return orderItemRepository.findById(orderItemId)
                 .map(orderItem -> mapToDTO(orderItem, new OrderItemDTO()))

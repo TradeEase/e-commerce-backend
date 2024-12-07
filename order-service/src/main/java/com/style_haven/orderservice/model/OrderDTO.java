@@ -14,9 +14,11 @@ public class OrderDTO {
     @Size(max = 255)
     private String userId;
 
-    private Integer totalAmount;
-
     private Boolean status;
+
+    private Integer productId;
+
+    private Integer quantity;
 
     private Integer cart;
 

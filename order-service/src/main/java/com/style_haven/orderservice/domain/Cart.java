@@ -29,7 +29,7 @@ public class Cart {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer cartId;
 
-    @Column
+    @Column(unique = true)
     private String userId;
 
     @OneToMany(mappedBy = "cart")

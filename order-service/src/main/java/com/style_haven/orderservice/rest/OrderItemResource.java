@@ -32,7 +32,11 @@ public class OrderItemResource {
     public ResponseEntity<List<OrderItemDTO>> getAllOrderItems() {
         return ResponseEntity.ok(orderItemService.findAll());
     }
-
+    @GetMapping("/order/{orderId}")
+    public ResponseEntity<List<OrderItemDTO>> getOrderItemsByOrder(
+            @PathVariable(name = "orderId") final Integer orderId) {
+        return ResponseEntity.ok(orderItemService.findByOrder(orderId));
+    }
     @GetMapping("/{orderItemId}")
     public ResponseEntity<OrderItemDTO> getOrderItem(
             @PathVariable(name = "orderItemId") final Integer orderItemId) {
