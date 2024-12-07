@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="229dbbdd-967e-4376-95a1-5503f4f0b814" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskUserService/src/main/java/com/example/TaskUserService/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TaskUserService/src/main/java/com/example/TaskUserService/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartItemResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderItemResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paymentservice/src/main/java/com/style_haven/paymentservice/rest/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/src/main/java/com/style_haven/paymentservice/rest/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;herathua&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TradeEase/e-commerce-backend.git&quot;,
+    &quot;accountId&quot;: &quot;04861902-9d44-47aa-b2ef-883421e4e146&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -50,6 +65,7 @@
     "Spring Boot.OrderserviceApplication.executor": "Run",
     "Spring Boot.PaymentserviceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
+    "Spring Boot.SpringCloudServiceApplication.executor": "Run",
     "Spring Boot.TaskUserServiceApplication.executor": "Run",
     "git-widget-placeholder": "CrosAdded-v2",
     "kotlin-language-version-configured": "true",
@@ -63,6 +79,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -73,7 +92,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.SpringCloudServiceApplication">
     <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="admin-service" />
@@ -152,6 +171,8 @@
       <updated>1733382544118</updated>
       <workItem from="1733382545571" duration="1840000" />
       <workItem from="1733542163706" duration="9136000" />
+      <workItem from="1733594346118" duration="416000" />
+      <workItem from="1733595105298" duration="1263000" />
     </task>
     <servers />
   </component>
