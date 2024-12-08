@@ -8,24 +8,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-cloud-service" />
-        <module name="TaskUserService" />
         <module name="product-service" />
-        <module name="user-service" />
         <module name="order-service" />
         <module name="paymentservice" />
-        <module name="admin-service" />
+        <module name="TaskUserService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="TaskUserService" options="-parameters" />
-      <module name="admin-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="paymentservice" options="-parameters" />
       <module name="product-service" options="-parameters" />
       <module name="spring-cloud-service" options="-parameters" />
-      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>

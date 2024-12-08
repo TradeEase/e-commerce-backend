@@ -1,0 +1,51 @@
+services:
+  gateway:
+    build:
+      context: ./paymentservice
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+    depends_on:
+      - taskuserservice
+      - orderservice
+      - productservice
+      - paymentservice
+
+  taskuserservice:
+    build:
+      context: ./TaskUserService
+    container_name: taskuserservice
+    ports:
+      - "8081:8081"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+
+  orderservice:
+    build:
+      context: ./order-Service
+    container_name: orderservice
+    ports:
+      - "8082:8082"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+
+  productservice:
+    build:
+      context: ./product-Service
+    container_name: productservice
+    ports:
+      - "8083:8083"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+
+  paymentservice:
+    build:
+      context: ./paymentservice
+    container_name: paymentservice
+    ports:
+      - "8086:8086"
+    environment:
+      - JAVA_OPTS=-Xmx256m
