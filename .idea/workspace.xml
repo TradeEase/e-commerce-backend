@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="229dbbdd-967e-4376-95a1-5503f4f0b814" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/domain/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/model/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/repos/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderItemResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/service/OrderService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,30 +30,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.OrderserviceApplication.executor": "Run",
-    "Spring Boot.PaymentserviceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "Spring Boot.TaskUserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "CrosAdded-v2",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/Acedemic/L3S1/EAD/project/BeLast2/e-commerce-backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.OrderserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentserviceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SpringCloudServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TaskUserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CrosAdded-v2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Acedemic/L3S1/EAD/project/BeLast2/e-commerce-backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -73,7 +66,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.SpringCloudServiceApplication">
     <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="admin-service" />
@@ -151,7 +144,10 @@
       <option name="presentableId" value="Default" />
       <updated>1733382544118</updated>
       <workItem from="1733382545571" duration="1840000" />
-      <workItem from="1733542163706" duration="9136000" />
+      <workItem from="1733542163706" duration="11123000" />
+      <workItem from="1733620572235" duration="761000" />
+      <workItem from="1733626666317" duration="2723000" />
+      <workItem from="1733647745963" duration="181000" />
     </task>
     <servers />
   </component>
