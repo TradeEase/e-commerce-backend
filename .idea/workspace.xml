@@ -4,49 +4,136 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="229dbbdd-967e-4376-95a1-5503f4f0b814" name="Changes" comment="">
+    <list default="true" id="20663757-add8-4c92-a302-da9906cb3ff6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TaskUserService/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paymentservice/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskUserService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TaskUserService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskUserService/src/main/java/com/example/TaskUserService/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/TaskUserService/src/main/java/com/example/TaskUserService/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskUserService/src/main/java/com/example/TaskUserService/response/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/TaskUserService/src/main/java/com/example/TaskUserService/response/AuthResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskUserService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/TaskUserService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/Test/java/BackendAdminTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/AdminServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/config/DomainConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/config/JacksonConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/domain/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/domain/Adminlog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/model/AdminDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/model/AdminlogAdminUnique.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/model/AdminlogDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/repos/AdminRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/repos/AdminlogRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/rest/AdminResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/rest/AdminlogResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/rest/HomeResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/service/AdminService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/service/AdminlogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/util/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/util/ReferencedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/java/com/style_haven/admin_service/util/ReferencedWarning.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartItemResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/CartResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderItemResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/style_haven/orderservice/rest/OrderResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paymentservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/paymentservice/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/config/DomainConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/config/JacksonConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/model/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/repos/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/rest/HomeResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/rest/UserResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/style_haven/user_service/util/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/UserBackendTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;herathua&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TradeEase/e-commerce-backend.git&quot;,
+    &quot;accountId&quot;: &quot;04861902-9d44-47aa-b2ef-883421e4e146&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2pmsNH4gJsHXN0V0svhkhe0Jb93" />
+  <component name="ProjectId" id="2pyAA9MjPx8XYZDQ7jARmIWBW5N" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;Docker.docker-compose.yml.frontend: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.gateway: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment (1).executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TaskUserService [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TaskUserService [install,-DskipTests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.TaskUserService [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [install,-DskipTests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.order-service [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.paymentservice [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.paymentservice [install,-DskipTests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.paymentservice [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.product-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.product-service [install,-DskipTests].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spring-cloud-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.spring-cloud-service [install].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.OrderserviceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.PaymentserviceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.SpringCloudServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.TaskUserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CrosAdded-v2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Final&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Acedemic/L3S1/EAD/project/BeLast2/e-commerce-backend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -56,6 +143,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install -DskipTests " />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -66,15 +158,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringCloudServiceApplication">
-    <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="admin-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.style_haven.admin_service.AdminServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration name="OrderserviceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="order-service" />
@@ -91,16 +175,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.style_haven.product_service.ProductServiceApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.style_haven.product_service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,9 +199,61 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment (1)" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="frontend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.gateway: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="gateway" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ProductServiceApplication" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.gateway: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment (1)" />
+        <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -138,16 +268,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="229dbbdd-967e-4376-95a1-5503f4f0b814" name="Changes" comment="" />
-      <created>1733382544118</created>
+      <changelist id="20663757-add8-4c92-a302-da9906cb3ff6" name="Changes" comment="" />
+      <created>1733727796726</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1733382544118</updated>
-      <workItem from="1733382545571" duration="1840000" />
-      <workItem from="1733542163706" duration="11123000" />
-      <workItem from="1733620572235" duration="761000" />
-      <workItem from="1733626666317" duration="2723000" />
-      <workItem from="1733647745963" duration="181000" />
+      <updated>1733727796726</updated>
+      <workItem from="1733727798764" duration="1770000" />
+      <workItem from="1733744663100" duration="462000" />
+      <workItem from="1733992793174" duration="4353000" />
+      <workItem from="1734014878575" duration="340000" />
+      <workItem from="1734016143730" duration="3688000" />
+      <workItem from="1734021462662" duration="1882000" />
     </task>
     <servers />
   </component>

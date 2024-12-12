@@ -37,7 +37,7 @@ import io.jsonwebtoken.Jwts;
 
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("api/taskuser/auth")
 public class UserController {
 
     @Autowired

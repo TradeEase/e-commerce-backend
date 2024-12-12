@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  gateway:
+    build:
+      context: ./spring-cloud-service
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+    depends_on:
+      - taskuserservice
+      - orderservice
+      - productservice
+      - paymentservice
+    restart: unless-stopped
+
+  taskuserservice:
+    build:
+      context: ./TaskUserService
+      dockerfile: Dockerfile
+    container_name: taskuserservice
+    ports:
+      - "8081:8081"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+    restart: unless-stopped
+
+  orderservice:
+    build:
+      context: ./order-Service
+      dockerfile: Dockerfile
+    container_name: orderservice
+    ports:
+      - "8082:8082"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+    restart: unless-stopped
+
+  productservice:
+    build:
+      context: ./product-Service
+      dockerfile: Dockerfile
+    container_name: productservice
+    ports:
+      - "8083:8083"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+    restart: unless-stopped
+
+  paymentservice:
+    build:
+      context: ./paymentservice
+      dockerfile: Dockerfile
+    container_name: paymentservice
+    ports:
+      - "8086:8086"
+    environment:
+      - JAVA_OPTS=-Xmx256m
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: E:/e-commerce-frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "8087:80"
+    restart: always
